@@ -1,0 +1,25 @@
+-- THEORY QUESTIONS
+
+-- 1. What is SQL?
+-- 2. What is the difference between SQL and MySQL, SQL Server?
+-- 3. What are constraints in SQL? List all of them. (Hint: There are 7 types of Constraints)
+-- 4. What do you mean by Normalization?
+-- 5. What are Dimension and Fact table?
+-- 6. What is Primary and Foreign Key?
+-- 7. What are different types of joins? State difference between them.
+-- 8. What is Self join?
+-- 9. What is Cross join?
+-- 10. What is Subquery? 
+-- 11. What is CTE?
+-- 12. What is the difference between UNION and UNION ALL?
+-- 13. What is the difference between WHERE and HAVING? 
+-- 14. What is the difference between DELETE and TRUNCATE?
+-- 15. What is Cardinality? What are different types of relationship in SQL?
+-- 16. What is Alias in SQL?
+-- 17. What is the order of execution in SQL?
+-- 18. Difference between ROW_NUMBER(), RANK(), DENSE_RANK().
+-- 19. What is the use of GROUP BY?
+-- 20. Difference between Subquery and CTE.
+-- 21. Which one is faster between UNION and UNION ALL?
+-- 22. Which one is faster between Subquery and Join?
+-- 23. Which one is faster between Subquery and CTE?
