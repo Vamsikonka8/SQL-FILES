@@ -78,13 +78,9 @@ SELECT * FROM SENIOR_MANAGER;
 SELECT * FROM MANAGER;
 SELECT * FROM EMPLOYEE;
 
-SELECT C.company_code , C.founder ,count(distinct L.Lead_manager_code) as Lcnt  , count( S.Lead_manager_code) as Scnt , 
-count( M.Senior_manager_code) as Mcnt
+SELECT Company_code , founder,
+(SELECT COUNT(DISTINCT Lead_manager_code)  FROM LEAD_MANAGER WHERE Company_code = C.Company_code) as Lcnt,
+(SELECT COUNT(DISTINCT Senior_manager_code)  FROM SENIOR_MANAGER WHERE Company_code = C.Company_code) as Scnt,
+(SELECT COUNT(DISTINCT manager_code)  FROM MANAGER WHERE Company_code = C.Company_code) as Mcnt,
+(SELECT COUNT(DISTINCT Employee_code)  FROM Employee WHERE Company_code = C.Company_code) as Ecnt
 FROM COMPANY AS C
-INNER JOIN LEAD_MANAGER AS L ON
-C.Company_code = L.Company_code
-INNER JOIN SENIOR_MANAGER as S ON
-L.Lead_manager_code = S.Lead_manager_code
-INNER JOIN MANAGER AS M ON
-M.Senior_manager_code = M.Senior_manager_code
-GROUP BY C.company_code , C.founder
